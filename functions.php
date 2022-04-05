@@ -23,8 +23,8 @@ add_filter('locale_stylesheet_uri', 'chld_thm_cfg_locale_css');
 
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/includes/custom-post-types.php';
-require __DIR__ . '/includes/cmb2-options.php';
-require __DIR__ . '/includes/cmb2.php'; 
+require __DIR__ . '/includes/cmb2-for-options.php';
+require __DIR__ . '/includes/cmb2.php';
 
 /**
  * Remove Storefront Sidebar

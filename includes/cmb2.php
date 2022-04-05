@@ -1,175 +1,90 @@
 <?php
-add_action('cmb2_admin_init', 'cmb2_for_experiencia_laboral');
+add_action('cmb2_admin_init', 'cmb2_fields');
+
 /**
- * Define the metabox and field configurations.
+ * Load all the CMB2 Fields
  */
-function cmb2_for_experiencia_laboral()
+function cmb2_fields()
 {
-
-    /**
-     * Initiate the metabox
-     */
-    $cmb = new_cmb2_box(array(
-        'id' => 'experiencia_laboral_metabox',
-        'title' => __('Experiencia Laboral', 'cmb2'),
-        'object_types' => array('experiencia_laboral'), // Post type
-        'context' => 'normal',
-        'priority' => 'high',
-        'show_names' => true, // Show field names on the left
-        'cmb_styles' => false, // false to disable the CMB stylesheet
-        'closed' => false, // Keep the metabox closed by default
-    ));
-
-    // Place to add the CMB2 Field Types
-    $prefix = "experiencia_laboral_";
-
-    $cmb->add_field(array(
-        'name' => 'Nombre de la Empresa',
-        'desc' => 'Inserta el nombre de la empresa donde laboraste.',
-        'default' => '',
-        'id' => $prefix . 'nombre_empresa',
-        'type' => 'text',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Puesto en la Empresa',
-        'desc' => 'Inserta el nombre del puesto que tenias en la empresa donde laboraste.',
-        'default' => '',
-        'id' => $prefix . 'puesto_empresa',
-        'type' => 'text',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Fecha de Inicio',
-        'id' => $prefix . 'fecha_inicio',
-        'type' => 'text_date',
-        'date_format' => 'd/m/Y',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Fecha de Fin',
-        'id' => $prefix . 'fecha_fin',
-        'type' => 'text_date',
-        'date_format' => 'd/m/Y',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Descripción del Puesto',
-        'desc' => 'Inserta las actividades o descripción del puesto que desempeñaste.',
-        'default' => '',
-        'id' => $prefix . 'descripcion_puesto',
-        'type' => 'textarea_small',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Tipo de Puesto',
-        'desc' => 'Selecciona una opción de Puesto.',
-        'id' => $prefix . 'tipo_puesto',
-        'type' => 'select',
-        'show_option_none' => true,
-        'default' => 'custom',
-        'options' => array(
-            'Jornada Completa' => __('Jornada Completa', 'cmb2'),
-            'Jornada Parcial' => __('Jornada Parcial', 'cmb2'),
-            'Autonomo' => __('Autonomo', 'cmb2'),
-            'Profesional Independiente' => __('Profesional Independiente', 'cmb2'),
-            'Contrato Temporal' => __('Contrato Temporal', 'cmb2'),
-            'Contrato de Practicas' => __('Contrato de Practicas', 'cmb2'),
-            'Contrato de Formación' => __('Contrato de Formación', 'cmb2'),
-            'Seasonal' => __('Seasonal', 'cmb2'),
-        ),
-    ));
+    /** CMB2 Fields for Custom Post Type: Experiencia Laboral */
+    require_once 'cmb2-for-experiencia-laboral.php';
+    /** CMB2 Fields for Custom Post Type: Educacion */
+    require_once 'cmb2-for-educacion.php';
+    /** CMB2 Fields for Custom Post Type: Certificaciones */
+    require_once 'cmb2-for-certificaciones.php';
 }
 
-add_action('cmb2_admin_init', 'cmb2_for_educacion');
+add_filter('manage_certificaciones_posts_columns', 'cmb2_columns_for_certificaciones');
+
 /**
- * Define the metabox and field configurations.
+ * Make a CMB2 Columns for Custom Post Type: Certificaciones
  */
-function cmb2_for_educacion()
+function cmb2_columns_for_certificaciones($columns)
 {
+    $columns['nombre'] = __('Nombre de la Certificacion', 'wp');
+    $columns['insititucion'] = __('Nombre de la Institucion', 'wp');
+    $columns['descripcion'] = __('Descripción de la Certificacion', 'wp');
+    $columns['tipo'] = __('Tipo de Certificacion', 'wp');
+    $columns['archivo'] = __('Archivo de Certificacion', 'wp');
+    return $columns;
+}
 
-    /**
-     * Initiate the metabox
-     */
-    $cmb = new_cmb2_box(array(
-        'id' => 'educacion_metabox',
-        'title' => __('Educación', 'cmb2'),
-        'object_types' => array('educacion'), // Post type
-        'context' => 'normal',
-        'priority' => 'high',
-        'show_names' => true, // Show field names on the left
-        'cmb_styles' => false, // false to disable the CMB stylesheet
-        'closed' => false, // Keep the metabox closed by default
-    ));
+add_action('manage_certificaciones_posts_custom_column', 'cmb2_columns_populate_for_certificaciones', 10, 2);
 
-    // Place to add the CMB2 Field Types
-    $prefix = "educacion_";
+/**
+ * Populate the Colums of Custom Post Type
+ */
+function cmb2_columns_populate_for_certificaciones($column, $post_id)
+{
+    // Nombre de la Certificacion
+    if ('nombre' === $column) {
+        $nombre = get_post_meta(get_the_ID(), 'certificaciones_nombre', true);
+        if (isset($nombre)) {
+            echo $nombre;
+        }
+    }
+    // Nombre de la Institucion
+    if ('insititucion' === $column) {
+        $insititucion = get_post_meta(get_the_ID(), 'certificaciones_institucion', true);
+        if (isset($insititucion)) {
+            echo $insititucion;
+        }
+    }
+    // Descirpcion de la Certificacion
+    if ('descripcion' === $column) {
+        $descripcion = get_post_meta(get_the_ID(), 'certificaciones_descripcion', true);
+        if (isset($descripcion)) {
+            echo $descripcion;
+        }
+    }
+    // Tipo de Certificacion
+    if ('tipo' === $column) {
+        $tipo = get_post_meta(get_the_ID(), 'certificaciones_tipo', true);
+        if (isset($tipo)) {
+            echo $tipo;
+        }
+    }
+    // Tipo de Certificacion
+    if ('archivo' === $column) {
+        $archivo = get_post_meta(get_the_ID(), 'certificaciones_archivo', true);
+        if (isset($archivo)) {
+            echo $archivo;
+        }
+    }
+}
 
-    $cmb->add_field(array(
-        'name' => 'Nombre de la Escuela',
-        'desc' => 'Inserta el nombre de la escuela.',
-        'default' => '',
-        'id' => $prefix . 'nombre_escuela',
-        'type' => 'text',
-    ));
+add_filter('wp_insert_post_data', 'modify_post_title');
 
-    $cmb->add_field(array(
-        'name' => 'Nombre de la Carrera',
-        'desc' => 'Inserta el nombre de la carrera.',
-        'default' => '',
-        'id' => $prefix . 'nombre_carrera',
-        'type' => 'text',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Fecha de Inicio',
-        'id' => $prefix . 'fecha_inicio',
-        'type' => 'text_date',
-        'date_format' => 'd/m/Y',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Fecha de Fin',
-        'id' => $prefix . 'fecha_fin',
-        'type' => 'text_date',
-        'date_format' => 'd/m/Y',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Descripción de la Educación',
-        'desc' => 'Inserta algo a destacar de tu educacion.',
-        'default' => '',
-        'id' => $prefix . 'descripcion_educacion',
-        'type' => 'textarea_small',
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Tipo de Educación',
-        'desc' => 'Selecciona una opción de Educación.',
-        'id' => $prefix . 'tipo_educacion',
-        'type' => 'select',
-        'show_option_none' => true,
-        'default' => 'custom',
-        'options' => array(
-            'Universidad' => __('Universidad', 'cmb2'),
-            'Preparatoria' => __('Preparatoria', 'cmb2'),
-            'Secundaria' => __('Secundaria', 'cmb2'),
-            'Curso' => __('Curso', 'cmb2'),
-            'BootCamp' => __('BootCamp', 'cmb2'),
-            'Academia' => __('Academia', 'cmb2'),
-            'Otro' => __('Otro', 'cmb2'),
-        ),
-    ));
-
-    $cmb->add_field(array(
-        'name' => 'Calificaciones',
-        'desc' => 'Inserta tu promedio de calificación.',
-        'default' => '',
-        'id' => $prefix . 'calificacion',
-        'type' => 'text',
-        'attributes' => array(
-            'type' => 'number',
-            'pattern' => '\d*',
-        ),
-    ));
+/**
+ * Rename a Post Title with CMB2 Custom Fileds Values
+ */
+function modify_post_title($data)
+{
+    if ($data['post_type'] == 'certificaciones' && isset($_POST['certificaciones_nombre'])) { // If the actual field name of the rating date is different, you'll have to update this.
+        $nombre = get_post_meta(get_the_ID(), 'certificaciones_nombre', true);
+        $insititucion = get_post_meta(get_the_ID(), 'certificaciones_institucion', true);
+        $title = 'Certificacion de ' . $nombre . ' de ' . $insititucion;
+        $data['post_title'] = $title; //Updates the post title to your new title.
+    }
+    return $data; // Returns the modified data.
 }

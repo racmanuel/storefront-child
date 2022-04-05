@@ -3,6 +3,10 @@
     --secondary: #ffffff;
     --third: #25ff00;
 }
+/** Set the Color Background in Pages */
+div#page {
+    background-color: var(--primary);
+}
 
 /** Border in Cards */
 .card.text-white.bg-transparent.border {

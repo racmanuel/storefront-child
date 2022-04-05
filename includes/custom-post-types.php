@@ -115,7 +115,7 @@ function cptui_register_my_cpts() {
 		"public" => true,
 		"publicly_queryable" => true,
 		"show_ui" => true,
-		"show_in_rest" => true,
+		"show_in_rest" => false,
 		"rest_base" => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"has_archive" => true,
@@ -127,13 +127,14 @@ function cptui_register_my_cpts() {
 		"map_meta_cap" => true,
 		"hierarchical" => true,
 		"can_export" => true,
-		"rewrite" => [ "slug" => "educación", "with_front" => true ],
+		"rewrite" => [ "slug" => "educacion", "with_front" => true ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-welcome-learn-more",
+		"supports" => [ "title" ],
 		"show_in_graphql" => false,
 	];
 
-	register_post_type( "educación", $args );
+	register_post_type( "educacion", $args );
 
 	/**
 	 * Post Type: Experiencias Laborales.
@@ -181,7 +182,7 @@ function cptui_register_my_cpts() {
 		"public" => true,
 		"publicly_queryable" => true,
 		"show_ui" => true,
-		"show_in_rest" => true,
+		"show_in_rest" => false,
 		"rest_base" => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"has_archive" => true,
@@ -196,6 +197,7 @@ function cptui_register_my_cpts() {
 		"rewrite" => [ "slug" => "experiencia_laboral", "with_front" => true ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-linkedin",
+		"supports" => [ "title" ],
 		"show_in_graphql" => false,
 	];
 
@@ -247,7 +249,7 @@ function cptui_register_my_cpts() {
 		"public" => true,
 		"publicly_queryable" => true,
 		"show_ui" => true,
-		"show_in_rest" => true,
+		"show_in_rest" => false,
 		"rest_base" => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"has_archive" => true,
