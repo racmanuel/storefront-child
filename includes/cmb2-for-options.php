@@ -1,10 +1,10 @@
 <?php
-
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
 /**
  * Options of the Theme with CMB2
- */
-
-/**
  * Hook in and register a metabox to handle a theme options page and adds a menu item.
  */
 function storefront_register_main_options_metabox()

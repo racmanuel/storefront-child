@@ -1,11 +1,8 @@
 <?php
-
-/**
- * 
- * CMB2 for Experiencia Laboral
- * 
- * 
- */
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 /**
  * Initiate the metabox
