@@ -11,3 +11,40 @@ Updated: 2022-03-19 15:52:29
 
 */
 
+h1, h2, h3, h4, h5, h6, body, button, input, textarea {
+	font-family: 'Source Code Pro', monospace;
+}
+
+/** Remove the Storefront Primary Navbar */
+
+@media (min-width: 768px) {
+	#masthead .col-full {
+		display: flex;
+		align-items: center;
+	}
+
+	#masthead .main-navigation {
+		text-align: right;
+	}
+
+	.woocommerce-active .site-header div.site-branding {
+		width: auto;
+	}
+}
+
+/* Styky Header
+#masthead {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+div#content {
+    padding-top: 12%;
+}
+
+@media (min-width: 768px) {
+	div#content {
+		padding-top: 12%;
+	}
+}*/

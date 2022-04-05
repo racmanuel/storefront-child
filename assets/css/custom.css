@@ -1,0 +1,69 @@
+:root {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --third: #25ff00;
+}
+
+/** Border in Cards */
+.card.text-white.bg-transparent.border {
+    border: 1px solid var(--third) !important;
+    border-radius: .25rem;
+}
+
+/** Color of Progress Bar */
+div.progress-bar {
+    color: var(--primary);
+    background-color: var(--third);
+    font-weight: 600;
+}
+
+a.more-link {
+    background-color: var(--third);
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid var(--third);
+    position: relative;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: var(--third);
+    color: var(--primary);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: var(--third);
+    border: 2px solid var(--third);
+}
