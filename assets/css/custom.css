@@ -21,6 +21,7 @@ div.progress-bar {
     font-weight: 600;
 }
 
+/** Color of View More link */
 a.more-link {
     background-color: var(--third);
     padding: 10px;
@@ -71,3 +72,6 @@ a.more-link {
     background: var(--third);
     border: 2px solid var(--third);
 }
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/

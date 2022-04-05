@@ -1,0 +1,24 @@
+{
+  "name": "storefront-child",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/racmanuel/storefront-child.git"
+  },
+  "author": "Manuel Ramirez Coronel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/racmanuel/storefront-child/issues"
+  },
+  "homepage": "https://github.com/racmanuel/storefront-child#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "scrollreveal": "^4.0.9",
+    "typed.js": "^2.0.12"
+  }
+}
