@@ -3,7 +3,11 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-add_action('cmb2_admin_init', 'cmb2_fields');
+/** For Only Admin Uses */
+//add_action('cmb2_admin_init', 'cmb2_fields');
+/** For Front End Uses */
+add_action('cmb2_init', 'cmb2_fields');
+
 
 /**
  * Load all the CMB2 Fields
