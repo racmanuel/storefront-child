@@ -7,9 +7,9 @@ if (!defined('ABSPATH')) {
  * Initiate the metabox
  */
 $cmb = new_cmb2_box(array(
-    'id' => 'certificacion_metabox',
-    'title' => __('Certificaciones', 'cmb2'),
-    'object_types' => array('certificaciones'), // Post type
+    'id' => 'certificados_metabox',
+    'title' => __('Certificados', 'cmb2'),
+    'object_types' => array('certificados'), // Post type
     'context' => 'normal',
     'priority' => 'high',
     'show_names' => true, // Show field names on the left
@@ -18,11 +18,11 @@ $cmb = new_cmb2_box(array(
 ));
 
 // Place to add the CMB2 Field Types
-$prefix = "certificaciones_";
+$prefix = "certificado_";
 
 $cmb->add_field(array(
-    'name' => 'Nombre de la Certificacion',
-    'desc' => 'Inserta el nombre de la Certificacion.',
+    'name' => 'Nombre del Certificado',
+    'desc' => 'Inserta el nombre del Certificado.',
     'default' => '',
     'id' => $prefix . 'nombre',
     'type' => 'text',
@@ -37,16 +37,16 @@ $cmb->add_field(array(
 ));
 
 $cmb->add_field(array(
-    'name' => 'Descripción de la Certificacion',
-    'desc' => 'Inserta una pequeña descripcion de la certificacion.',
+    'name' => 'Descripción del Certificado',
+    'desc' => 'Inserta una pequeña descripcion del certificado.',
     'default' => '',
     'id' => $prefix . 'descripcion',
     'type' => 'textarea_small',
 ));
 
 $cmb->add_field(array(
-    'name' => 'Tipo de Certificacion',
-    'desc' => 'Selecciona una opción de Certificacion.',
+    'name' => 'Tipo de Certificado',
+    'desc' => 'Selecciona una opción de Certificado.',
     'id' => $prefix . 'tipo',
     'type' => 'select',
     'show_option_none' => true,

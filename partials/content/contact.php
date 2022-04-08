@@ -6,7 +6,7 @@ $options = get_option('storefront_main_options');
 <section>
     <div class="container">
         <div class="row">
-            <div class="col mt-5">
+            <div class="col mt-5 scroll">
                 <h2>¿Eres reclutador?</h2>
                 <p>
                     Te invito a qeu visites mis Redes Sociales y te des una vuelta por ellas para que veas mi perfil
@@ -20,7 +20,7 @@ $options = get_option('storefront_main_options');
                     <a class="button"><i class="bi bi-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
-            <div class="col mt-5">
+            <div class="col mt-5 scroll">
                 <h2>¿Quieres Contactarme?</h2>
                 <?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]'); ?>
             </div>

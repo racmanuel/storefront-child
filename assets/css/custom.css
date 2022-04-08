@@ -29,6 +29,11 @@ a.more-link {
     text-decoration: none;
 }
 
+/** Color of Pages */
+a.page-numbers {
+    color: var(--third) !important;
+}
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/

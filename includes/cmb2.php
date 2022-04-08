@@ -19,7 +19,7 @@ function cmb2_fields()
     /** CMB2 Fields for Custom Post Type: Educacion */
     require_once 'cmb2-for-educacion.php';
     /** CMB2 Fields for Custom Post Type: Certificaciones */
-    require_once 'cmb2-for-certificaciones.php';
+    require_once 'cmb2-for-certificados.php';
 }
 
 add_filter('manage_certificaciones_posts_columns', 'cmb2_columns_for_certificaciones');
@@ -88,9 +88,9 @@ add_filter('wp_insert_post_data', 'modify_post_title');
  */
 function modify_post_title($data)
 {
-    if ($data['post_type'] == 'certificaciones' && isset($_POST['certificaciones_nombre'])) { // If the actual field name of the rating date is different, you'll have to update this.
-        $nombre = get_post_meta(get_the_ID(), 'certificaciones_nombre', true);
-        $insititucion = get_post_meta(get_the_ID(), 'certificaciones_institucion', true);
+    if ($data['post_type'] == 'certificados' && isset($_POST['certificado_nombre'])) { // If the actual field name of the rating date is different, you'll have to update this.
+        $nombre = get_post_meta(get_the_ID(), 'certificado_nombre', true);
+        $insititucion = get_post_meta(get_the_ID(), 'certificado_institucion', true);
         $title = 'Certificacion de ' . $nombre . ' de ' . $insititucion;
         $data['post_title'] = $title; //Updates the post title to your new title.
     }

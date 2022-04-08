@@ -209,46 +209,46 @@ function cptui_register_my_cpts() {
 	register_post_type( "experiencia_laboral", $args );
 
 	/**
-	 * Post Type: Certificaciones.
+	 * Post Type: Certificados.
 	 */
 
 	$labels = [
-		"name" => __( "Certificaciones", "custom-post-type-ui" ),
-		"singular_name" => __( "Certificacion", "custom-post-type-ui" ),
-		"menu_name" => __( "Mis Certificaciones", "custom-post-type-ui" ),
-		"all_items" => __( "Todos los Certificaciones", "custom-post-type-ui" ),
+		"name" => __( "Certificados", "custom-post-type-ui" ),
+		"singular_name" => __( "Certificados", "custom-post-type-ui" ),
+		"menu_name" => __( "Mis Certificados", "custom-post-type-ui" ),
+		"all_items" => __( "Todos los Certificados", "custom-post-type-ui" ),
 		"add_new" => __( "Añadir nuevo", "custom-post-type-ui" ),
-		"add_new_item" => __( "Añadir nuevo Certificacion", "custom-post-type-ui" ),
-		"edit_item" => __( "Editar Certificacion", "custom-post-type-ui" ),
-		"new_item" => __( "Nuevo Certificacion", "custom-post-type-ui" ),
-		"view_item" => __( "Ver Certificacion", "custom-post-type-ui" ),
-		"view_items" => __( "Ver Certificaciones", "custom-post-type-ui" ),
-		"search_items" => __( "Buscar Certificaciones", "custom-post-type-ui" ),
-		"not_found" => __( "No se ha encontrado Certificaciones", "custom-post-type-ui" ),
-		"not_found_in_trash" => __( "No se han encontrado Certificaciones en la papelera", "custom-post-type-ui" ),
-		"parent" => __( "Certificacion superior:", "custom-post-type-ui" ),
-		"featured_image" => __( "Imagen destacada para Certificacion", "custom-post-type-ui" ),
-		"set_featured_image" => __( "Establece una imagen destacada para Certificacion", "custom-post-type-ui" ),
-		"remove_featured_image" => __( "Eliminar la imagen destacada de Certificacion", "custom-post-type-ui" ),
-		"use_featured_image" => __( "Usar como imagen destacada de Certificacion", "custom-post-type-ui" ),
-		"archives" => __( "Archivos de Certificacion", "custom-post-type-ui" ),
-		"insert_into_item" => __( "Insertar en Certificacion", "custom-post-type-ui" ),
-		"uploaded_to_this_item" => __( "Subir a Certificacion", "custom-post-type-ui" ),
-		"filter_items_list" => __( "Filtrar la lista de Certificaciones", "custom-post-type-ui" ),
-		"items_list_navigation" => __( "Navegación de la lista de Certificaciones", "custom-post-type-ui" ),
-		"items_list" => __( "Lista de Certificaciones", "custom-post-type-ui" ),
-		"attributes" => __( "Atributos de Certificaciones", "custom-post-type-ui" ),
-		"name_admin_bar" => __( "Certificacion", "custom-post-type-ui" ),
-		"item_published" => __( "Certificacion publicado", "custom-post-type-ui" ),
-		"item_published_privately" => __( "Certificacion publicado como privado.", "custom-post-type-ui" ),
-		"item_reverted_to_draft" => __( "Certificacion devuelto a borrador.", "custom-post-type-ui" ),
-		"item_scheduled" => __( "Certificacion programado", "custom-post-type-ui" ),
-		"item_updated" => __( "Certificacion actualizado.", "custom-post-type-ui" ),
-		"parent_item_colon" => __( "Certificacion superior:", "custom-post-type-ui" ),
+		"add_new_item" => __( "Añadir nuevo Certificado", "custom-post-type-ui" ),
+		"edit_item" => __( "Editar Certificado", "custom-post-type-ui" ),
+		"new_item" => __( "Nuevo Certificado", "custom-post-type-ui" ),
+		"view_item" => __( "Ver Certificado", "custom-post-type-ui" ),
+		"view_items" => __( "Ver Certificado", "custom-post-type-ui" ),
+		"search_items" => __( "Buscar Certificado", "custom-post-type-ui" ),
+		"not_found" => __( "No se ha encontrado Certificados", "custom-post-type-ui" ),
+		"not_found_in_trash" => __( "No se han encontrado Certificados en la papelera", "custom-post-type-ui" ),
+		"parent" => __( "Certificados superior:", "custom-post-type-ui" ),
+		"featured_image" => __( "Imagen destacada para Certificado", "custom-post-type-ui" ),
+		"set_featured_image" => __( "Establece una imagen destacada para Certificados", "custom-post-type-ui" ),
+		"remove_featured_image" => __( "Eliminar la imagen destacada de Certificados", "custom-post-type-ui" ),
+		"use_featured_image" => __( "Usar como imagen destacada de Certificados", "custom-post-type-ui" ),
+		"archives" => __( "Archivos de Certificados", "custom-post-type-ui" ),
+		"insert_into_item" => __( "Insertar en Certificados", "custom-post-type-ui" ),
+		"uploaded_to_this_item" => __( "Subir a Certificados", "custom-post-type-ui" ),
+		"filter_items_list" => __( "Filtrar la lista de Certificados", "custom-post-type-ui" ),
+		"items_list_navigation" => __( "Navegación de la lista de Certificados", "custom-post-type-ui" ),
+		"items_list" => __( "Lista de Certificados", "custom-post-type-ui" ),
+		"attributes" => __( "Atributos de Certificados", "custom-post-type-ui" ),
+		"name_admin_bar" => __( "Certificado", "custom-post-type-ui" ),
+		"item_published" => __( "Certificado publicado", "custom-post-type-ui" ),
+		"item_published_privately" => __( "Certificado publicado como privado.", "custom-post-type-ui" ),
+		"item_reverted_to_draft" => __( "Certificado devuelto a borrador.", "custom-post-type-ui" ),
+		"item_scheduled" => __( "Certificado programado", "custom-post-type-ui" ),
+		"item_updated" => __( "Certificado actualizado.", "custom-post-type-ui" ),
+		"parent_item_colon" => __( "Certificado superior:", "custom-post-type-ui" ),
 	];
 
 	$args = [
-		"label" => __( "Certificaciones", "custom-post-type-ui" ),
+		"label" => __( "Certificados", "custom-post-type-ui" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
@@ -266,14 +266,14 @@ function cptui_register_my_cpts() {
 		"map_meta_cap" => true,
 		"hierarchical" => true,
 		"can_export" => true,
-		"rewrite" => [ "slug" => "certificaciones", "with_front" => true ],
+		"rewrite" => [ "slug" => "certificados", "with_front" => true ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-awards",
 		"supports" => [ "title" ],
 		"show_in_graphql" => false,
 	];
 
-	register_post_type( "certificaciones", $args );
+	register_post_type( "certificados", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );

@@ -6,7 +6,7 @@ $options = get_option('storefront_main_options');
 <section class="mt-5">
     <div class="container">
         <div class="row">
-            <div class="col mb-5">
+            <div class="col mb-5 scroll">
                 <h2>Mis Skills</h2>
                 <?php
                     $skills = $options['storefront_options_repeat_group_2'];
@@ -19,7 +19,7 @@ $options = get_option('storefront_main_options');
                         }
                         // Do something with the data
                 ?>
-                <div class="row">
+                <div class="row scroll">
                     <div>
                         <span><?php echo $title_skill; ?></span>
                         <div class="progress">

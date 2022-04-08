@@ -1,11 +1,3 @@
-// Can also be included with a regular script tag
-//Typed.JS
-import Typed from 'typed.js';
-//ScrollReveal.JS
-import ScrollReveal from 'scrollreveal';
-//Popper.JS
-import Popper from "popper.js";
-
 document.addEventListener("DOMContentLoaded", function () {
     
     var typed_cool = new Typed('#typed-cool', {
