@@ -60,11 +60,11 @@ function storefront_enqueue_styles_scripts()
     
     //Bootstrap CSS
     //wp_register_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', array(), '1.0', 'all');
-    wp_register_style('bootstrap-css', get_stylesheet_directory_uri().'vendor/twbs/bootstrap/dist/css/bootstrap.min.css', array(), '1.0', 'all');
+    wp_register_style('bootstrap-css', get_stylesheet_directory_uri().'/vendor/twbs/bootstrap/dist/css/bootstrap.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bootstrap-css');
 
     //wp_register_script( 'boostrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js', array(), '1.0', true );
-    wp_register_script( 'boostrap-js', get_stylesheet_directory_uri().'vendor/twbs/bootstrap/dist/js/bootstrap.min.js', array(), '1.0', true );
+    wp_register_script( 'boostrap-js', get_stylesheet_directory_uri().'/vendor/twbs/bootstrap/dist/js/bootstrap.min.js', array(), '1.0', true );
     wp_enqueue_script('boostrap-js');
 
     //boostrap-icons

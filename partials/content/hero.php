@@ -1,3 +1,7 @@
+<?php
+/** Get the Global Options Settings */
+$options = get_option('storefront_main_options');
+?>
 <!-- ======= Hero Section ======= -->
 <section>
     <div class="container">

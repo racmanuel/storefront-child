@@ -1,3 +1,7 @@
+<?php
+/** Get the Global Options Settings */
+$options = get_option('storefront_main_options');
+?>
 <!-- ======= Certificactes Section ======= -->
 <section class="mt-5 mb-5">
     <div class="container">

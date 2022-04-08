@@ -7,9 +7,6 @@ if (!defined('ABSPATH')) {
 /** Get the Header */
 get_header();
 
-/** Get the Global Options Settings */
-$options = get_option('storefront_main_options');
-
 /** Hero Section */
 get_template_part('partials/content/hero');
 /** Resueme Section */
