@@ -44,6 +44,18 @@ function remove_storefront_sidebar()
     }
 }
 
+add_filter( 'login_display_language_dropdown', '__return_false' );
+
+/**
+ * Enqueue Styles and Scripts in the Login
+ */
+function storefront_child_theme_racmanuel(){
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri(). '/assets/css/custom-login.css', array(), '1.0', 'all' );
+      //Google Fonts
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), '1.0', 'all');
+}
+add_action( 'login_enqueue_scripts', 'storefront_child_theme_racmanuel' );
+
 /**
  * Equeue custom scripts and styles
  */

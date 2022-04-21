@@ -3,6 +3,9 @@
     --secondary: #ffffff;
     --third: #25ff00;
 }
+body{
+    font-family: 'Source Code Pro', monospace;
+}
 /** Set the Color Background in Pages */
 div#page {
     background-color: var(--primary);

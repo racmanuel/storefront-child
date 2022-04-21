@@ -1,0 +1,76 @@
+:root {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --third: #25ff00;
+}
+body{
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.login form{
+    background-color: var(--primary);
+    border: 1px solid var(--third);
+}
+.login #login_error, .login .message, .login .success {
+    border-left: 4px solid var(--third);
+    padding: 12px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    background-color: var(--primary);
+    border-top: 1px solid var(--third);
+    border-bottom: 1px solid var(--third);
+    border-right: 1px solid var(--third);
+    word-wrap: break-word;
+}
+
+input#wp-submit{
+    background-color: var(--third);
+    color: var(--primary);
+    border-radius: 0px;
+    border: none;
+}
+
+input#user_login{
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--third);
+    border-radius: 0px
+    border-color: var(--third);
+    box-shadow: 0 0 0 1px var(--third);
+    outline: 2px solid transparent;
+}
+
+input#user_pass{
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--third);
+    border-radius: 0px
+    border-color: var(--third);
+    box-shadow: 0 0 0 1px var(--third);
+    outline: 2px solid transparent;
+}
+
+span.dashicons.dashicons-hidden{
+    color: var(--third);
+}
+span.dashicons.dashicons-visibility{
+    color: var(--third);
+}
+
+.login .button.wp-hide-pw:focus {
+    background: 0 0;
+    border-color: var(--third);
+    box-shadow: 0 0 0 1px var(--third);
+    outline: 2px solid transparent;
+}
+
+input#rememberme{
+    background-color: var(--primary);
+    border: 1px solid var(--third);
+    border-radius: 0px;
+}
+
+a {
+    color: white !important;
+}
