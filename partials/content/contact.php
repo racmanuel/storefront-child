@@ -13,11 +13,11 @@ $options = get_option('storefront_main_options');
                     completo.
                 </p>
                 <div class="d-grid gap-2 mx-auto">
-                    <a href="<?php echo $options['storefront_options_url']; ?>" class="button"><i
+                    <a href="<?php echo $options['storefront_options_url_cv']; ?>" class="button"><i
                             class="bi bi-file-earmark-arrow-down-fill"></i> Curriculum Vitae</a>
-                    <a class="button"><i class="bi bi-linkedin"></i> Linkedin</a>
-                    <a class="button"><i class="bi bi-github"></i> Github</a>
-                    <a class="button"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                    <a href="<?php echo $options['storefront_options_url_linkedin']; ?>" class="button"><i class="bi bi-linkedin"></i> Linkedin</a>
+                    <a href="<?php echo $options['storefront_options_url_github']; ?>" class="button"><i class="bi bi-github"></i> Github</a>
+                    <a href="<?php echo $options['storefront_options_url_whatsapp']; ?>" class="button"><i class="bi bi-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
             <div class="col mt-5 scroll">
