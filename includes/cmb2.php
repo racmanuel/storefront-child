@@ -81,18 +81,20 @@ function cmb2_columns_populate_for_certificaciones($column, $post_id)
     }
 }
 
-add_filter('wp_insert_post_data', 'modify_post_title');
-
 /**
- * Rename a Post Title with CMB2 Custom Fileds Values
+ * Rename a Post Title on update with CMB2 Custom Fileds Values
  */
-function modify_post_title($data)
-{
-    if ($data['post_type'] == 'certificados' && isset($_POST['certificado_nombre'])) { // If the actual field name of the rating date is different, you'll have to update this.
-        $nombre = get_post_meta(get_the_ID(), 'certificado_nombre', true);
-        $insititucion = get_post_meta(get_the_ID(), 'certificado_institucion', true);
-        $title = 'Certificacion de ' . $nombre . ' de ' . $insititucion;
-        $data['post_title'] = $title; //Updates the post title to your new title.
+function set_certificates_title( $data , $postarr ) {
+    if($data['post_type'] == 'certificados') {
+      $certificate_name = get_post_meta($postarr['ID'],'certificado_nombre',true);
+      $certificate_school = get_post_meta($postarr['ID'], 'certificado_institucion' , true);
+      $certificate_title = 'Certificacion de ' . $certificate_name . ' de ' . $certificate_school;
+      $post_slug = sanitize_title_with_dashes ($certificate_title,'','save');
+      $post_slugsan = sanitize_title($post_slug);
+  
+      $data['post_title'] = $certificate_title;
+      $data['post_name'] = $post_slugsan;
     }
-    return $data; // Returns the modified data.
-}
+    return $data;
+  }
+add_filter( 'wp_insert_post_data' , 'set_certificates_title' , '10', 2 );
