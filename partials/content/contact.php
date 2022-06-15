@@ -7,7 +7,7 @@ $options = get_option('storefront_main_options');
     <div class="container">
         <div class="row">
             <div class="col mt-5 scroll">
-                <h2>¿Eres reclutador?</h2>
+                <h2>Redes Sociales</h2>
                 <p>
                     Te invito a qeu visites mis Redes Sociales y te des una vuelta por ellas para que veas mi perfil
                     completo.
