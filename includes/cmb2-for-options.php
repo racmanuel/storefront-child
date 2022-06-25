@@ -108,8 +108,8 @@ function storefront_register_main_options_metabox()
         // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
     ));
     $cmb->add_field( array(
-        'name' => __( 'URL de WhatsApp', 'cmb2' ),
-        'id'   => $prefix . 'url_whatsapp',
+        'name' => __( 'URL de WordPress', 'cmb2' ),
+        'id'   => $prefix . 'url_wordpress',
         'type' => 'text_url',
         // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
     ));

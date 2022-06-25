@@ -17,7 +17,7 @@ $options = get_option('storefront_main_options');
                             class="bi bi-file-earmark-arrow-down-fill"></i> Curriculum Vitae</a>
                     <a href="<?php echo $options['storefront_options_url_linkedin']; ?>" class="button"><i class="bi bi-linkedin"></i> Linkedin</a>
                     <a href="<?php echo $options['storefront_options_url_github']; ?>" class="button"><i class="bi bi-github"></i> Github</a>
-                    <a href="<?php echo $options['storefront_options_url_whatsapp']; ?>" class="button"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                    <a href="<?php echo $options['storefront_options_url_wordpress']; ?>" class="button"><i class="bi bi-wordpress"></i> WordPress</a>
                 </div>
             </div>
             <div class="col mt-5 scroll">
