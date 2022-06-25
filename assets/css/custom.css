@@ -87,11 +87,13 @@ a.page-numbers {
 # Resume
 --------------------------------------------------------------*/
 
-/* Code for do a ScreenLines in Page like Old CTR Screen*/
+/* Code for do a ScreenLines in Page like Old CTR Screen
 body.page {
     position: relative;
-    /*overflow: hidden;*/
-}
+    /*overflow: hidden;
+}*/
+
+/*
 
 body.page:before,
 body.page:after {
@@ -120,8 +122,9 @@ body.page:after {
     background-size: 100% 4px;
     animation: scanlines 1s steps(60) infinite;
 }
-
+*/
 /* ANIMATE UNIQUE SCANLINE */
+/*
 @keyframes scanline {
     0% {
         transform: translate3d(0, 200000%, 0);
@@ -133,4 +136,5 @@ body.page:after {
         background-position: 0 50%;
     }
 }
+*/
 /* End of CTR Code*/
