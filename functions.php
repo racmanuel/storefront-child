@@ -3,6 +3,10 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/includes/custom-post-types.php';
+require __DIR__ . '/includes/cmb2-for-options.php';
+require __DIR__ . '/includes/cmb2.php';
 
 // BEGIN ENQUEUE PARENT ACTION
 // AUTO GENERATED - Do not modify or remove comment markers above or below:
@@ -20,11 +24,6 @@ endif;
 add_filter('locale_stylesheet_uri', 'chld_thm_cfg_locale_css');
 
 // END ENQUEUE PARENT ACTION
-
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/includes/custom-post-types.php';
-require __DIR__ . '/includes/cmb2-for-options.php';
-require __DIR__ . '/includes/cmb2.php';
 
 /**
  * Remove Storefront Sidebar
