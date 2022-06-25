@@ -1,0 +1,124 @@
+:root {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --third: #25ff00;
+}
+body{
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.login form{
+    background-color: var(--primary);
+    border: 1px solid var(--third);
+}
+.login #login_error, .login .message, .login .success {
+    border-left: 4px solid var(--third);
+    padding: 12px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    background-color: var(--primary);
+    border-top: 1px solid var(--third);
+    border-bottom: 1px solid var(--third);
+    border-right: 1px solid var(--third);
+    word-wrap: break-word;
+}
+
+input#wp-submit{
+    background-color: var(--third);
+    color: var(--primary);
+    border-radius: 0px;
+    border: none;
+}
+
+input#user_login{
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--third);
+    border-radius: 0px;
+    border-color: var(--third);
+    box-shadow: 0 0 0 1px var(--third);
+    outline: 2px solid transparent;
+}
+
+input#user_pass{
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--third);
+    border-radius: 0px;
+    border-color: var(--third);
+    box-shadow: 0 0 0 1px var(--third);
+    outline: 2px solid transparent;
+}
+
+span.dashicons.dashicons-hidden{
+    color: var(--third);
+}
+span.dashicons.dashicons-visibility{
+    color: var(--third);
+}
+
+.login .button.wp-hide-pw:focus {
+    background: 0 0;
+    border-color: var(--third);
+    box-shadow: 0 0 0 1px var(--third);
+    outline: 2px solid transparent;
+}
+
+input#rememberme{
+    background-color: var(--primary);
+    border: 1px solid var(--third);
+    border-radius: 0px;
+}
+
+a {
+    color: white !important;
+}
+
+/* Code for do a ScreenLines in Page like Old CTR Screen*/
+body.login {
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+body.login:before,
+body.login:after {
+    display: block;
+    pointer-events: none;
+    content: '';
+    position: absolute;
+}
+
+body.login:before {
+    width: 100%;
+    height: 2px;
+    z-index: 2147483649;
+    background: rgba(0, 0, 0, .3);
+    opacity: 0.75;
+    animation: scanline 6s linear infinite;
+}
+
+body.login:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483648;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .3) 51%);
+    background-size: 100% 4px;
+    animation: scanlines 1s steps(60) infinite;
+}
+
+/* ANIMATE UNIQUE SCANLINE */
+@keyframes scanline {
+    0% {
+        transform: translate3d(0, 200000%, 0);
+    }
+}
+
+@keyframes scanlines {
+    0% {
+        background-position: 0 50%;
+    }
+}
+/* End of CTR Code*/
