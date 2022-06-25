@@ -91,7 +91,25 @@ function storefront_register_main_options_metabox()
     ));
     $cmb->add_field( array(
         'name' => __( 'URL de CV', 'cmb2' ),
-        'id'   => $prefix . 'url',
+        'id'   => $prefix . 'url_cv',
+        'type' => 'text_url',
+        // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
+    ));
+    $cmb->add_field( array(
+        'name' => __( 'URL de Linkedin', 'cmb2' ),
+        'id'   => $prefix . 'url_linkedin',
+        'type' => 'text_url',
+        // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
+    ));
+    $cmb->add_field( array(
+        'name' => __( 'URL de GitHub', 'cmb2' ),
+        'id'   => $prefix . 'url_github',
+        'type' => 'text_url',
+        // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
+    ));
+    $cmb->add_field( array(
+        'name' => __( 'URL de WhatsApp', 'cmb2' ),
+        'id'   => $prefix . 'url_whatsapp',
         'type' => 'text_url',
         // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
     ));
@@ -173,7 +191,6 @@ function storefront_register_main_options_metabox()
         'sanitization_cb' => 'absint',
         'escape_cb'       => 'absint',
     ) );
-    
     
 }
 add_action('cmb2_admin_init', 'storefront_register_main_options_metabox');
